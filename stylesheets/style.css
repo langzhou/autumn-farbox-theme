@@ -13,7 +13,7 @@ blockquote p{
 font-size:13px;
 line-height:1.5em;}
 p,li{
-line-height:1.5em;
+line-height:1.7em;
 }
 .container{	max-width:700px;}
 .main-title{
@@ -23,6 +23,10 @@ margin:45px auto;
 .main-title a{
 font-weight:bold;
 color:#333;
+}
+.main-title a:hover{
+color: #a64b00;
+text-decoration:none;
 }
 .main-title h1{font-size:23px;}
 .main-title p{
