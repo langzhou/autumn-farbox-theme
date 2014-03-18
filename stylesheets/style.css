@@ -1,20 +1,10 @@
 div,p{word-wrap:break-word;}
-a {
-color: #a64b00;
-text-decoration: none;
-}
-a:hover{
-color:#ccc;
-}
-img{
-max-width:100%;
-}
-blockquote p{
-font-size:13px;
-line-height:1.5em;}
-p,li{
-line-height:1.7em;
-}
+a {color: #a64b00;text-decoration: none;}
+a:hover{color:#ccc;}
+img{max-width:100%;}
+blockquote p{font-size:13px;line-height:1.5em;}
+p,li{line-height:1.7em;}
+
 .container{	max-width:700px;}
 .main-title{
 text-align:center;
