@@ -1,0 +1,9 @@
+<div class="cateogry">  
+<p><b>Hot Tags</b></p>
+<ul>
+{% for tag_name, tag_count in site.tags %}
+<li><a href="/tags/{{tag_name}}">{{ tag_name }}&nbsp;<span>{{ tag_count }}</span></a><li>
+{% endfor %}
+<ul>
+    
+</div>

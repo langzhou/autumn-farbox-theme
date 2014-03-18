@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel='alternate' type='application/rss+xml' title='atom 1.0' href='/feed' />
+    <title>{% block title %} {% endblock %}</title>     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/template/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="/t/stylesheets/bootstrap.min.css" />
+	<link rel="stylesheet" href="/t/stylesheets/bootstrap-responsive.min.css"  media="screen">	
+    <link rel="stylesheet" href="/t/stylesheets/style.css" />
+	<link rel="stylesheet" href="/t/stylesheets/highlight.css" />
+
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="container">
+		<div class="main-title">
+			<a href="http://{{site.domain}}" alt="Back to home"><h1>{{site.title}}</h1></a>
+			<p>飞过，就要留下翅膀的痕迹！</p>
+		</div>		
+        <div class="main_content">
+            {% block content %}
+            {% endblock %}
+        </div>
+	 {% include 'include/footer.html' %}
+    </div>
+   
+
+</body>
+</html>
