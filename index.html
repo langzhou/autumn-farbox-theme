@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}{{ site.title }}{% endblock %}
 
+{% block seo %}
+<meta name="description" content="思维进化录" />
+<meta name="keywords" content="个人提升,个人博客,Linux,Android,产品,互联网" />
+{% endblock %}
 {% block content %}
     {% if configs.posts and configs.files %}
         {% if posts %}

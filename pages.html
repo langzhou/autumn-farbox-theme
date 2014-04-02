@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
-
-
+{% block title %}
+    {% if request.path == '/pages/links' %}
+        Links &amp; Friends
+    {% elif request.path == '/pages/about' %}
+        About Me
+    {% else %}
+        {{ post.title }}
+    {% endif %}
+{% endblock %}
+{% block seo %}
+<link rel="canonical" href="{{post.url}}" />
+<meta name="description" content="{{ post.title }},{{ post.raw_content[:100]}}" />
+<meta name="keywords" content="{% for tag in post.tags %}{{ tag }},{% endfor %}" />
+{% endblock %}
 {% block content %}
     {% if request.path == '/pages/links' %}
     <div class="page-content">{{ post.content }}</div>
@@ -34,6 +46,6 @@
         </script>
         {% endif %} 
     {% else %}
-    <div class="post">{{ post.content }}</div>
+    <div class="page-content">{{ post.content }}</div>
     {% endif %}
 {% endblock %}

@@ -3,9 +3,18 @@ a {color: #a64b00;text-decoration: none;}
 a:hover{color:#ccc;}
 img{max-width:100%;}
 blockquote p{font-size:13px;line-height:1.5em;}
-p,li{line-height:1.7em;}
-
-.container{	max-width:700px;}
+p,li{line-height:1.6em;}
+p{
+margin-bottom:18px;}
+.codehilitetable{
+border:0;}
+.codehilitetable td,.codehilitetable tr{border:0}
+td,th{
+border:1px solid #ccc;
+padding:5px;}
+table{
+margin:5px 0;}
+.container{	max-width:650px;}
 .main-title{
 text-align:center;
 margin:45px auto;
@@ -42,7 +51,7 @@ margin:3px 0 10px 0;
 font-size:13px;
 }
 .post-header{
-font-size:25px;
+font-size:20px;
 color: #a64b00;}
 .post-content{
 border-top:1px dashed #eee;
@@ -52,6 +61,9 @@ margin-bottom:40px;
 .entry-meta{
 color:#333;
 }
+.entry-tags a{
+background:#efefef;
+padding:0 5px;}
 
 .entry h1{
 font-size:18px;

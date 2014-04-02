@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}{{ post.title }} | {{ site.configs.title or site.title }}{% endblock %}
 
+{% block seo %}
+<link rel="canonical" href="{{post.url}}" />
+<meta name="description" content="{{ post.title }},{{ post.raw_content[:100]}}" />
+<meta name="keywords" content="{% for tag in post.tags %}{{ tag }},{% endfor %}" />
+{% endblock %}
+
 {% block content %}
 
     <div class="post-content">        
@@ -9,12 +15,12 @@
             </h2>
             <div class="entry-meta">
                 <span> 
-                    {{ post.date | date('%Y-%m-%d') }}
+                   {{ post.date | date('%Y-%m-%d') }}
                 </span>                                
             </div>
     
         <div class="entry">{{ post| auto_content }}</div>
-		<div>
+		<div class="entry-tags">
 		{% if post.tags %}
                 <p> <b>Tags:</b>  
                     {% for tag in post.tags %}
